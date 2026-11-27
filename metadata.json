@@ -1,0 +1,6 @@
+{
+  "name": "Grand Regency 8-Ball",
+  "description": "Classic 1990s casino 2D online multiplayer 8-ball pool game with authentic WPA rules and realistic physics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
