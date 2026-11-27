@@ -1,0 +1,113 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: 'Cinzel', Georgia, serif;
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  html,
+  body,
+  #root {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #070908;
+    color: #f5efe2;
+    font-family: var(--font-sans);
+    -webkit-tap-highlight-color: transparent;
+    overscroll-behavior: none;
+  }
+}
+
+.font-casino {
+  font-family: var(--font-display);
+}
+
+.font-mono-nums {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+/* 1990s High-Roller Casino Billiards Parlor: Tiffany overhead amber wash + classic woven carpet diamond motif */
+.casino-parlor-bg {
+  background-color: #080908;
+  background-image:
+    radial-gradient(ellipse 68% 58% at 50% 48%, rgba(245, 200, 95, 0.085) 0%, rgba(16, 78, 52, 0.22) 38%, rgba(36, 15, 11, 0.42) 68%, rgba(5, 6, 6, 0.98) 100%),
+    radial-gradient(circle at 50% -8%, rgba(243, 208, 107, 0.16) 0%, transparent 52%),
+    repeating-linear-gradient(
+      45deg,
+      rgba(212, 175, 55, 0.018) 0px,
+      rgba(212, 175, 55, 0.018) 1px,
+      transparent 1px,
+      transparent 22px
+    ),
+    repeating-linear-gradient(
+      -45deg,
+      rgba(128, 24, 34, 0.032) 0px,
+      rgba(128, 24, 34, 0.032) 1px,
+      transparent 1px,
+      transparent 22px
+    );
+}
+
+/* Burnished Lacquered Mahogany Plaque Surface with recessed gold hairline bevel */
+.mahogany-panel {
+  background: linear-gradient(162deg, #251812 0%, #170f0b 52%, #0e0907 100%);
+  box-shadow:
+    0 22px 48px rgba(0, 0, 0, 0.78),
+    inset 0 1px 0 rgba(247, 218, 132, 0.22),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.75),
+    inset 0 0 0 1px rgba(212, 175, 55, 0.08);
+}
+
+/* Engraved Brass Divider Hairline */
+.brass-divider {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(212, 175, 55, 0.45) 25%,
+    rgba(247, 218, 132, 0.75) 50%,
+    rgba(212, 175, 55, 0.45) 75%,
+    transparent 100%
+  );
+}
+
+/* Beveled Brass Gold Title Text */
+.gold-title-gradient {
+  background: linear-gradient(180deg, #fff6d9 0%, #f3d06b 46%, #c29124 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.65));
+}
+
+/* Custom gold/mahogany scrollbars for Rule Book and modals */
+.casino-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+
+.casino-scroll::-webkit-scrollbar-track {
+  background: rgba(15, 10, 7, 0.85);
+  border-radius: 3px;
+}
+
+.casino-scroll::-webkit-scrollbar-thumb {
+  background: rgba(212, 175, 55, 0.45);
+  border-radius: 3px;
+}
+
+.casino-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(212, 175, 55, 0.72);
+}
+
+/* Prevent accidental touch pan/zoom on game canvas and power slider */
+.touch-game-surface {
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
